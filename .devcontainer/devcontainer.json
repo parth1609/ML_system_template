@@ -1,0 +1,24 @@
+{
+  // Name of the dev container
+  "name": "ML System Template",
+
+  // Path to the Dockerfile used to build the container
+  "dockerFile": "Dockerfile",
+
+  // Path to the root directory of the project to be mounted into the container
+  "context": "..",
+
+  // Settings for Python in the container
+  "settings": {
+    "python.defaultInterpreterPath": "/usr/local/bin/python"
+  },
+
+  // Command to run after the container is created
+  "postCreateCommand": "pip install -r requirements.txt",
+
+  // Ports to forward from the container to the host
+  "forwardPorts": [8000],
+
+  // User to run commands as in the container
+  "remoteUser": "vscode"
+}

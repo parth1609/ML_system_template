@@ -1,0 +1,44 @@
+# 1. Create the root directory and move into it
+mkdir ml_system_template
+cd ml_system_template
+
+# 2. Create all directories
+# PowerShell's "mkdir" (which is an alias for New-Item)
+# automatically creates parent directories (like -p).
+# We use a backtick (`) for line continuation.
+mkdir `
+  .devcontainer, `
+  .github/workflows, `
+  app/api, `
+  app/core, `
+  app/models, `
+  app/services, `
+  tests
+
+# 3. Create all empty files
+# PowerShell uses "New-Item -ItemType File" (or "ni") instead of "touch".
+ni -ItemType File `
+  .devcontainer/devcontainer.json, `
+  .devcontainer/Dockerfile, `
+  .github/workflows/ci.yml, `
+  app/__init__.py, `
+  app/main.py, `
+  app/api/__init__.py, `
+  app/api/routes.py, `
+  app/core/config.py, `
+  app/core/logger.py, `
+  app/models/model.py, `
+  app/services/inference.py, `
+  tests/__init__.py, `
+  tests/test_api.py, `
+  .flake8, `
+  pyproject.toml, `
+  requirements.txt, `
+  Makefile, `
+  docker-compose.yml, `
+  README.md
+
+# 4. (Optional) Print the structure to verify
+echo "✅ Directory structure created:"
+# "ls -R" in PowerShell is "Get-ChildItem -Recurse" (or "gci -r")
+gci -r
