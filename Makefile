@@ -30,10 +30,10 @@ docker-up:
 
 
 # How tohow to use?
-make install
-make format	
-make lint
-make test
-make run
-make docker-build
-make docker-up
+# make install
+# make format	
+# make lint
+# make test
+# make run
+# make docker-build
+# make docker-up
