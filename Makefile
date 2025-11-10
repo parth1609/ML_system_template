@@ -15,7 +15,7 @@ lint:
 
 # Runs tests with verbose output
 test:
-	pytest -v
+	$(PYTHON) -m pytest -v
 
 # Starts the FastAPI development server
 run:
