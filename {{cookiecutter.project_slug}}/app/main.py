@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 from .api.routes import router as api_router
 
-app = FastAPI(title="{{cookiecutter.project_name}}")
+app = FastAPI(title="ML System Template")
 app.include_router(api_router, prefix="/api")
 
 @app.get("/")
 def read_root():
-    return {"message": "{{cookiecutter.project_name}} running!"}
+    return {"message": "ML System Template running!"}
 
 if __name__ == "__main__":
     import uvicorn

@@ -1,0 +1,10 @@
+{
+    "project_name": "ML System",
+    "project_slug": "ml_system",
+    "author_name": "Your Name",
+    "author_email": "your.email@example.com",
+    "description": "A scalable ML system template",
+    "python_version": "3.13",
+    "use_docker": "y",
+    "use_fastapi": "y"
+}
